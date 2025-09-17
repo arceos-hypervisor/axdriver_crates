@@ -65,6 +65,10 @@ const PCI_IRQ_BASE: u32 = 0x20;
 #[cfg(target_arch = "loongarch64")]
 const PCI_IRQ_BASE: u32 = 0x10;
 
+// Not used on aarch64
+#[cfg(target_arch = "aarch64")]
+const PCI_IRQ_BASE: u32 = 0x0;
+
 /// Try to probe a VirtIO PCI device from the given PCI address.
 ///
 /// If the device is recognized, returns the device type and a transport object
