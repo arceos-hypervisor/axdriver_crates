@@ -1,8 +1,8 @@
 use core::ptr::NonNull;
 
 use virtio_drivers::{
-    transport::{DeviceStatus, DeviceType, Transport},
     Error, PhysAddr, Result,
+    transport::{DeviceStatus, DeviceType, Transport},
 };
 
 pub struct DummyTransport;

@@ -11,8 +11,9 @@ impl SdMmcDriver {
     ///
     /// # Safety
     ///
-    /// The caller must ensure that `base` is a valid pointer to the SD/MMC controller's
-    /// register block and that no other code is concurrently accessing the same hardware.
+    /// The caller must ensure that `base` is a valid pointer to the SD/MMC
+    /// controller's register block and that no other code is concurrently
+    /// accessing the same hardware.
     pub unsafe fn new(base: usize) -> Self {
         Self(SdMmc::new(base))
     }

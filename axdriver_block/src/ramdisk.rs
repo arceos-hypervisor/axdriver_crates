@@ -1,7 +1,8 @@
 //! Mock block devices that store data in RAM.
 
-use crate::BlockDriverOps;
 use axdriver_base::{BaseDriverOps, DevError, DevResult, DeviceType};
+
+use crate::BlockDriverOps;
 
 const BLOCK_SIZE: usize = 512;
 

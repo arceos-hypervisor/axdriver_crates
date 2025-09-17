@@ -2,8 +2,8 @@ use core::ops::Range;
 
 use axdriver_base::{BaseDriverOps, DevError, DevResult, DeviceType};
 use gpt_disk_io::{
-    gpt_disk_types::{BlockSize, GptPartitionEntry, Lba},
     BlockIo, Disk, DiskError,
+    gpt_disk_types::{BlockSize, GptPartitionEntry, Lba},
 };
 use log::{debug, info};
 
@@ -63,7 +63,8 @@ pub struct GptPartitionDev<T> {
 }
 
 impl<T: BlockDriverOps> GptPartitionDev<T> {
-    /// Creates a new GPT partition device from the given block storage device driver.
+    /// Creates a new GPT partition device from the given block storage device
+    /// driver.
     ///
     /// Will use the first partition that matches the given selection criteria.
     pub fn try_new<F>(mut inner: T, mut predicate: F) -> DevResult<Self>
